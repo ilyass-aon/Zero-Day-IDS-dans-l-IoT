@@ -1,0 +1,19 @@
+seed: 42
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+
+windowing:
+  size_seconds: 5
+  label_rule: "any_attack"   # any_attack | majority
+
+split:
+  train: 0.6
+  val: 0.2
+  test: 0.2
+  strategy: temporal
+
+zero_day:
+  candidates: ["ddos", "mitm", "ransomware"]
